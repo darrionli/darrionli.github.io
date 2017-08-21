@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Sunshine">
 <meta property="og:description" content="最近在读《高性能MySQL》这本书，关于数据类型的常用优化，我认为有必要总结一下分享给大家。  如何选择合适的数据类型下面有几条简单的原则有助于我们选做出更好的选择。  小而简单的数据类型通常更好 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。由于更小的数据类型通常占用更少的磁盘、内存和CPU，并且处理时需要的CPU周期也更少。 例如只需要存0~200，tinyint  unsign">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-21T06:38:20.946Z">
+<meta property="og:updated_time" content="2017-08-21T06:44:07.238Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL数据类型优化">
 <meta name="twitter:description" content="最近在读《高性能MySQL》这本书，关于数据类型的常用优化，我认为有必要总结一下分享给大家。  如何选择合适的数据类型下面有几条简单的原则有助于我们选做出更好的选择。  小而简单的数据类型通常更好 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。由于更小的数据类型通常占用更少的磁盘、内存和CPU，并且处理时需要的CPU周期也更少。 例如只需要存0~200，tinyint  unsign">
@@ -393,52 +393,40 @@
 <tr>
 <th>存储空间 (Bytes)</th>
 <th style="text-align:left">类型</th>
-<th>最小值 (Signed\</th>
-<th style="text-align:left">Unsigned)</th>
-<th>最大值 (Signed\</th>
-<th>Unsigned)</th>
+<th>最小值 (Signed-Unsigned)</th>
+<th style="text-align:left">最大值 (Signed-Unsigned)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
 <td style="text-align:left">tinyint</td>
-<td>-128\</td>
-<td style="text-align:left">0</td>
-<td>127\</td>
-<td>255</td>
+<td>-128-0</td>
+<td style="text-align:left">127-255</td>
 </tr>
 <tr>
 <td>2</td>
 <td style="text-align:left">smallint</td>
-<td>-32768\</td>
-<td style="text-align:left">0</td>
-<td>32767\</td>
-<td>65535</td>
+<td>-32768-0</td>
+<td style="text-align:left">32767-65535</td>
 </tr>
 <tr>
 <td>3</td>
 <td style="text-align:left">mediumint</td>
-<td>-8388608\</td>
-<td style="text-align:left">0</td>
-<td>8388607\</td>
-<td>16777215</td>
+<td>-8388608-0</td>
+<td style="text-align:left">8388607-16777215</td>
 </tr>
 <tr>
 <td>4</td>
 <td style="text-align:left">int</td>
-<td>-2147483648\</td>
-<td style="text-align:left">0</td>
-<td>2147483647\</td>
-<td>4294967295</td>
+<td>-2147483648-0</td>
+<td style="text-align:left">2147483647-4294967295</td>
 </tr>
 <tr>
 <td>8</td>
 <td style="text-align:left">bigint</td>
-<td>-9223372036854775808\</td>
-<td style="text-align:left">0</td>
-<td>9223372036854775807\</td>
-<td>18446744073709551615</td>
+<td>-9223372036854775808-0</td>
+<td style="text-align:left">9223372036854775807-18446744073709551615</td>
 </tr>
 </tbody>
 </table>
