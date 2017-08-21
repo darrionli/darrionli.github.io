@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Sunshine">
 <meta property="og:description" content="最近在读《高性能MySQL》这本书，关于数据类型的常用优化，我认为有必要总结一下分享给大家。  如何选择合适的数据类型下面有几条简单的原则有助于我们选做出更好的选择。  小而简单的数据类型通常更好 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。由于更小的数据类型通常占用更少的磁盘、内存和CPU，并且处理时需要的CPU周期也更少。 例如只需要存0~200，tinyint  unsign">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-17T03:04:46.689Z">
+<meta property="og:updated_time" content="2017-08-21T06:38:20.946Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL数据类型优化">
 <meta name="twitter:description" content="最近在读《高性能MySQL》这本书，关于数据类型的常用优化，我认为有必要总结一下分享给大家。  如何选择合适的数据类型下面有几条简单的原则有助于我们选做出更好的选择。  小而简单的数据类型通常更好 一般情况下，应该尽量使用可以正确存储数据的最小数据类型。由于更小的数据类型通常占用更少的磁盘、内存和CPU，并且处理时需要的CPU周期也更少。 例如只需要存0~200，tinyint  unsign">
@@ -391,52 +391,52 @@
 <h3 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h3><table>
 <thead>
 <tr>
-<th style="text-align:center">类型</th>
-<th style="text-align:center">存储空间 (Bytes)</th>
-<th style="text-align:center">最小值 (Signed\</th>
-<th style="text-align:center">Unsigned)</th>
+<th>存储空间 (Bytes)</th>
+<th style="text-align:left">类型</th>
+<th>最小值 (Signed\</th>
+<th style="text-align:left">Unsigned)</th>
 <th>最大值 (Signed\</th>
 <th>Unsigned)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">tinyint</td>
-<td style="text-align:center">1</td>
-<td style="text-align:center">-128\</td>
-<td style="text-align:center">0</td>
+<td>1</td>
+<td style="text-align:left">tinyint</td>
+<td>-128\</td>
+<td style="text-align:left">0</td>
 <td>127\</td>
 <td>255</td>
 </tr>
 <tr>
-<td style="text-align:center">smallint</td>
-<td style="text-align:center">2</td>
-<td style="text-align:center">-32768\</td>
-<td style="text-align:center">0</td>
+<td>2</td>
+<td style="text-align:left">smallint</td>
+<td>-32768\</td>
+<td style="text-align:left">0</td>
 <td>32767\</td>
 <td>65535</td>
 </tr>
 <tr>
-<td style="text-align:center">mediumint</td>
-<td style="text-align:center">3</td>
-<td style="text-align:center">-8388608\</td>
-<td style="text-align:center">0</td>
+<td>3</td>
+<td style="text-align:left">mediumint</td>
+<td>-8388608\</td>
+<td style="text-align:left">0</td>
 <td>8388607\</td>
 <td>16777215</td>
 </tr>
 <tr>
-<td style="text-align:center">int</td>
-<td style="text-align:center">4</td>
-<td style="text-align:center">-2147483648\</td>
-<td style="text-align:center">0</td>
+<td>4</td>
+<td style="text-align:left">int</td>
+<td>-2147483648\</td>
+<td style="text-align:left">0</td>
 <td>2147483647\</td>
 <td>4294967295</td>
 </tr>
 <tr>
-<td style="text-align:center">bigint</td>
-<td style="text-align:center">8</td>
-<td style="text-align:center">-9223372036854775808\</td>
-<td style="text-align:center">0</td>
+<td>8</td>
+<td style="text-align:left">bigint</td>
+<td>-9223372036854775808\</td>
+<td style="text-align:left">0</td>
 <td>9223372036854775807\</td>
 <td>18446744073709551615</td>
 </tr>
@@ -488,6 +488,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/08/php-develop-security-advise.html" rel="prev" title="PHP开发安全建议">
+                PHP开发安全建议 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -564,7 +568,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -575,7 +579,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -586,7 +590,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
